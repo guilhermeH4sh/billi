@@ -42,17 +42,14 @@ class BilliNavbar extends HTMLElement {
     this.innerHTML = `
       <nav class="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div class="flex items-center gap-3" id="logo-container">
+          <a href="${active === 'index' ? '#' : 'index.html'}" class="flex items-center gap-3 text-dark-graphite hover:text-brand-gold-dark transition-colors focus-visible:rounded" id="logo-container">
             <!-- Billi Custom SVG Logo -->
-            <svg viewBox="0 0 100 100" class="w-8 h-8 text-dark-graphite" fill="currentColor" fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 100 100" class="w-8 h-8" fill="currentColor" fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg">
               <path d="M 50 21 A 35 35 0 1 1 49.9 21 Z M 30 56 A 20 20 0 0 0 70 56 C 70 46 65 42 50 48 C 35 42 30 46 30 56 Z" />
               <circle cx="70" cy="22" r="9" class="text-brand-gold" fill="#C5A880" />
             </svg>
-            ${active === 'index' 
-              ? `<span class="font-headline-md text-xl tracking-tighter uppercase font-extrabold text-dark-graphite">Billi</span>` 
-              : `<a href="index.html" class="font-headline-md text-xl tracking-tighter uppercase font-extrabold text-dark-graphite hover:text-brand-gold-dark transition-colors focus-visible:rounded">Billi</a>`
-            }
-          </div>
+            <span class="font-headline-md text-xl tracking-tighter uppercase font-extrabold">Billi</span>
+          </a>
           
           <!-- Menu Desktop -->
           <div class="hidden md:flex gap-10 items-center">
@@ -81,13 +78,13 @@ class BilliNavbar extends HTMLElement {
         <div id="mobile-drawer-content" class="w-4/5 max-w-sm bg-white h-full shadow-2xl p-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300">
           <div>
             <div class="flex items-center justify-between mb-12">
-              <div class="flex items-center gap-3">
-                <svg viewBox="0 0 100 100" class="w-8 h-8 text-dark-graphite" fill="currentColor" fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg">
+              <a href="${active === 'index' ? '#' : 'index.html'}" class="flex items-center gap-3 text-dark-graphite hover:text-brand-gold-dark transition-colors focus-visible:rounded">
+                <svg viewBox="0 0 100 100" class="w-8 h-8" fill="currentColor" fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg">
                   <path d="M 50 21 A 35 35 0 1 1 49.9 21 Z M 30 56 A 20 20 0 0 0 70 56 C 70 46 65 42 50 48 C 35 42 30 46 30 56 Z" />
                   <circle cx="70" cy="22" r="9" class="text-brand-gold" fill="#C5A880" />
                 </svg>
-                <span class="font-headline-md text-xl tracking-tighter uppercase font-extrabold text-dark-graphite">Billi</span>
-              </div>
+                <span class="font-headline-md text-xl tracking-tighter uppercase font-extrabold">Billi</span>
+              </a>
               <button id="mobile-menu-close-btn" class="p-2 text-dark-graphite hover:text-brand-gold-dark transition-colors focus-visible:rounded-full" aria-label="Fechar menu de navegação">
                 <span class="material-symbols-outlined text-3xl">close</span>
               </button>
