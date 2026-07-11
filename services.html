@@ -4,15 +4,22 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Serviços de Elite | Billi</title>
 <meta name="description" content="Nosso leque de serviços B2B de alto padrão: branding, web design disruptivo, WebGL e otimização de conversão." />
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Serviços de Elite | Billi" />
+<meta property="og:description" content="Nosso leque de serviços B2B de alto padrão: branding, web design disruptivo, WebGL e otimização de conversão." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://billi.com/services.html" />
+<meta property="og:image" content="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80" />
+
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <!-- GSAP & ScrollTrigger Libraries -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="components.js"></script>
 <script id="tailwind-config">
         tailwind.config = {
-            darkMode: "class",
             theme: {
                 extend: {
                     "colors": {
@@ -34,6 +41,7 @@
                         "surface-container-high": "#EBEBEB",
                         "surface-container-highest": "#E0E0E0",
                         "brand-gold": "#C5A880",
+                        "brand-gold-dark": "#85663A",
                         "dark-graphite": "#131313",
                         "pure-off-white": "#FAFAFA",
                         "muted-gray": "#757575"
@@ -59,33 +67,12 @@
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-brand-gold selection:text-dark-graphite">
+<a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 <!-- Section 1: Navbar (Sticky) -->
-<nav class="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant">
-<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-<div class="flex items-center gap-3" id="logo-container">
-<!-- Billi Custom SVG Logo -->
-<svg viewBox="0 0 100 100" class="w-8 h-8 text-dark-graphite" fill="currentColor" fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg">
-    <path d="M 50 21 A 35 35 0 1 1 49.9 21 Z M 30 56 A 20 20 0 0 0 70 56 C 70 46 65 42 50 48 C 35 42 30 46 30 56 Z" />
-    <circle cx="70" cy="22" r="9" class="text-brand-gold" fill="#C5A880" />
-</svg>
-<a href="index.html" class="font-headline-md text-xl tracking-tighter uppercase font-extrabold text-dark-graphite">Billi</a>
-</div>
-<div class="hidden md:flex gap-10 items-center">
-<a class="text-sm font-medium hover:text-brand-gold transition-colors text-on-surface-variant" href="manifesto.html">Manifesto</a>
-<a class="text-sm font-medium hover:text-brand-gold transition-colors text-on-surface-variant" href="cases.html">Cases</a>
-<a class="text-sm font-medium text-brand-gold" href="services.html">Serviços</a>
-<a class="text-sm font-medium hover:text-brand-gold transition-colors text-on-surface-variant" href="process.html">Processo</a>
-<a class="text-sm font-medium hover:text-brand-gold transition-colors text-on-surface-variant" href="lab.html">Lab</a>
-<a class="text-sm font-medium hover:text-brand-gold transition-colors text-on-surface-variant" href="faq.html">FAQ</a>
-</div>
-<a href="index.html#cta" class="bg-dark-graphite text-white px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 hover:bg-brand-gold hover:text-dark-graphite transition-all inline-block text-center">
-            Iniciar Projeto
-        </a>
-</div>
-</nav>
+<billi-navbar active-page="services"></billi-navbar>
 
 <!-- Main Page Content -->
-<main class="pt-40">
+<main id="main-content" class="pt-40">
 <!-- Intro Section -->
 <div class="max-w-7xl mx-auto px-6 mb-20">
 <span class="text-dark-graphite bg-brand-gold inline-block px-3 py-1 font-bold uppercase tracking-widest mb-4 text-xs rounded-sm">Serviços</span>
@@ -147,56 +134,7 @@
 </main>
 
 <!-- Footer -->
-<footer class="bg-surface-container-lowest border-t border-outline-variant pt-20 pb-10">
-<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
-<div class="col-span-1 md:col-span-1">
-<div class="flex items-center gap-3 mb-6">
-<svg viewBox="0 0 100 100" class="w-8 h-8 text-dark-graphite" fill="currentColor" fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg">
-    <path d="M 50 21 A 35 35 0 1 1 49.9 21 Z M 30 56 A 20 20 0 0 0 70 56 C 70 46 65 42 50 48 C 35 42 30 46 30 56 Z" />
-    <circle cx="70" cy="22" r="9" class="text-brand-gold" fill="#C5A880" />
-</svg>
-<span class="font-headline-md text-xl tracking-tighter uppercase font-extrabold text-dark-graphite">Billi</span>
-</div>
-<p class="text-sm text-on-surface-variant leading-relaxed">Redefinindo os limites do design B2B através da sofisticação e precisão estratégica.</p>
-</div>
-<div>
-<h4 class="font-bold text-dark-graphite mb-6 uppercase text-xs tracking-widest">Navegação</h4>
-<ul class="space-y-4 text-sm text-on-surface-variant">
-<li><a class="hover:text-brand-gold transition-colors" href="manifesto.html">Manifesto</a></li>
-<li><a class="hover:text-brand-gold transition-colors" href="cases.html">Cases</a></li>
-<li><a class="text-brand-gold" href="services.html">Serviços</a></li>
-<li><a class="hover:text-brand-gold transition-colors" href="process.html">Processo</a></li>
-<li><a class="hover:text-brand-gold transition-colors" href="lab.html">Lab</a></li>
-<li><a class="hover:text-brand-gold transition-colors" href="faq.html">FAQ</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold text-dark-graphite mb-6 uppercase text-xs tracking-widest">Serviços</h4>
-<ul class="space-y-4 text-sm text-on-surface-variant">
-<li><a class="hover:text-brand-gold transition-colors" href="services.html">Web Design</a></li>
-<li><a class="hover:text-brand-gold transition-colors" href="services.html">Landing Pages</a></li>
-<li><a class="hover:text-brand-gold transition-colors" href="services.html">UI/UX Strategy</a></li>
-<li><a class="hover:text-brand-gold transition-colors" href="services.html">Branding</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold text-dark-graphite mb-6 uppercase text-xs tracking-widest">Contato</h4>
-<ul class="space-y-4 text-sm text-on-surface-variant">
-<li>hello@billi.com</li>
-<li>+55 (11) 99999-9999</li>
-<li>São Paulo, BR</li>
-</ul>
-</div>
-</div>
-<div class="max-w-7xl mx-auto px-6 pt-10 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-6">
-<p class="text-xs text-muted-gray">© 2026 Billi. Todos os direitos reservados.</p>
-<div class="flex gap-6">
-<a class="text-muted-gray hover:text-brand-gold transition-colors" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
-<a class="text-muted-gray hover:text-brand-gold transition-colors" href="#"><span class="material-symbols-outlined" data-icon="public">public</span></a>
-<a class="text-muted-gray hover:text-brand-gold transition-colors" href="#"><span class="material-symbols-outlined" data-icon="link">link</span></a>
-</div>
-</div>
-</footer>
+<billi-footer></billi-footer>
 
 <script>
     gsap.registerPlugin(ScrollTrigger);
