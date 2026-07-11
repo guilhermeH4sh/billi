@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Billi | High-End B2B Digital Agency</title>
+<!-- SEO & Open Graph Meta Tags -->
+<meta name="description" content="Billi é uma agência digital B2B de alto padrão especializada no desenvolvimento de websites de luxo, aplicações web de alta performance e configuradores interativos 3D. Transformamos sua presença digital em autoridade." />
+<meta name="robots" content="index, follow" />
+<meta property="og:title" content="Billi | High-End B2B Digital Agency" />
+<meta property="og:description" content="Agência especializada em desenvolvimento de websites, aplicações web e soluções digitais de luxo de alta performance." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://billi.com" />
+<meta property="og:image" content="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80" />
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- GSAP Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#131313",
+                        "on-primary": "#FFFFFF",
+                        "secondary": "#404040",
+                        "on-secondary": "#FFFFFF",
+                        "background": "#FFFFFF",
+                        "on-background": "#131313",
+                        "surface": "#F9F9F9",
+                        "on-surface": "#131313",
+                        "surface-variant": "#E0E0E0",
+                        "on-surface-variant": "#404040",
+                        "outline": "#D1D1D1",
+                        "outline-variant": "#EEEEEE",
+                        "surface-container-lowest": "#FFFFFF",
+                        "surface-container-low": "#F9F9F9",
+                        "surface-container": "#F3F3F3",
+                        "surface-container-high": "#EBEBEB",
+                        "surface-container-highest": "#E0E0E0",
+                        "brand-gold": "#C5A880",
+                        "dark-graphite": "#131313",
+                        "pure-off-white": "#FAFAFA",
+                        "muted-gray": "#757575"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Syne"],
+                        "display-xl": ["Syne"],
+                        "headline-md": ["Syne"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .parallax-target { transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1); transform-style: preserve-3d; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-brand-gold selection:text-dark-graphite">
+<!-- Section 1: Navbar (Sticky) -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3" id="logo-container">
+<!-- Billi Custom SVG Logo -->
+<svg viewBox="0 0 100 100" class="w-8 h-8 text-dark-graphite" fill="currentColor" fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 50 21 A 35 35 0 1 1 49.9 21 Z M 30 56 A 20 20 0 0 0 70 56 C 70 46 65 42 50 48 C 35 42 30 46 30 56 Z" />
+    <circle cx="70" cy="22" r="9" class="text-brand-gold" fill="#C5A880" />
+</svg>
+<span class="font-headline-md text-xl tracking-tighter uppercase font-extrabold text-dark-graphite">Billi</span>
+</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="text-sm font-medium hover:text-brand-gold transition-colors text-on-surface-variant" href="manifesto.html">Manifesto</a>
+<a class="text-sm font-medium hover:text-brand-gold transition-colors text-on-surface-variant" href="cases.html">Cases</a>
+<a class="text-sm font-medium hover:text-brand-gold transition-colors text-on-surface-variant" href="services.html">Serviços</a>
+<a class="text-sm font-medium hover:text-brand-gold transition-colors text-on-surface-variant" href="process.html">Processo</a>
+<a class="text-sm font-medium hover:text-brand-gold transition-colors text-on-surface-variant" href="lab.html">Lab</a>
+<a class="text-sm font-medium hover:text-brand-gold transition-colors text-on-surface-variant" href="faq.html">FAQ</a>
+</div>
+<a href="#cta" class="bg-dark-graphite text-white px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 hover:bg-brand-gold hover:text-dark-graphite transition-all inline-block text-center">
+            Iniciar Projeto
+        </a>
+</div>
+</nav>
+
+<!-- Section 2: Hero -->
+<header class="relative pt-40 pb-20 overflow-hidden min-h-screen flex items-center bg-white">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+<div class="reveal-hero lg:col-span-7">
+<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-dark-graphite mb-6 leading-[1.1] tracking-tighter font-headline-lg">
+                Sites que <span class="bg-brand-gold text-dark-graphite px-3 py-1 rounded-md">quebram</span> a régua B2B.
+            </h1>
+<p class="text-lg md:text-xl text-on-surface-variant mb-10 max-w-xl leading-relaxed font-medium">
+                Design de alta performance e experiências memoráveis de luxo para marcas que definem o mercado global.
+            </p>
+<div class="flex flex-wrap gap-4">
+<a href="#cta" class="bg-dark-graphite text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-brand-gold hover:text-dark-graphite transition-all shadow-lg inline-block text-center">
+                    Iniciar Projeto
+                </a>
+<a href="cases.html" class="border border-outline text-dark-graphite px-8 py-4 rounded-full font-bold text-lg hover:bg-surface-container-low transition-all inline-block text-center font-bold">
+                    Ver Cases
+                </a>
+</div>
+</div>
+<div class="relative h-[500px] w-full reveal-hero-mockup lg:col-span-5">
+<!-- Asymmetric Mockup Composition with Luxury Themed Screens -->
+<div class="absolute top-0 right-0 w-[80%] h-[350px] bg-white rounded-xl shadow-2xl border border-outline-variant overflow-hidden parallax-target" style="transform: rotate(-2deg);">
+<img class="w-full h-full object-cover" alt="A modern luxury fashion storefront mockup" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80"/>
+</div>
+<div class="absolute bottom-0 left-0 w-[70%] h-[300px] bg-white rounded-xl shadow-2xl border border-outline-variant overflow-hidden parallax-target" style="transform: rotate(5deg);">
+<img class="w-full h-full object-cover" alt="A modern luxury supercar configurator mockup" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"/>
+</div>
+</div>
+</div>
+<!-- Decorative gold glow element -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-gold/5 blur-[120px] rounded-full -z-0"></div>
+</header>
+
+<!-- Section 3: Manifesto Teaser -->
+<section class="py-24 bg-surface-container-lowest" id="manifesto">
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+<div>
+<span class="text-dark-graphite bg-brand-gold inline-block px-3 py-1 font-bold uppercase tracking-widest mb-4 text-xs rounded-sm">Manifesto</span>
+<h2 class="text-4xl md:text-6xl font-bold tracking-tight font-headline-lg text-dark-graphite mb-6">Impacto de Negócios através do Luxo & Disrupção</h2>
+<p class="text-lg text-on-surface-variant mb-8 leading-relaxed">Redefinimos a presença digital aplicando a sofisticação da alta costura e a precisão técnica da engenharia automobilística B2B. A estética de alta costura é a base de nossa visão.</p>
+<a href="manifesto.html" class="inline-flex items-center gap-2 text-brand-gold font-bold hover:underline text-lg">
+  Ler Manifesto Completo <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div>
+<p class="text-dark-graphite font-bold text-3xl md:text-4xl border-l-4 border-brand-gold pl-6 py-2 leading-snug">"Nós não criamos apenas websites. Construímos verdadeiras obras de arte digitais focadas em conversão."</p>
+</div>
+</div>
+</section>
+
+<!-- Section 4: Cases Teaser (3 Static Cards) -->
+<section class="py-24 bg-background" id="cases">
+<div class="max-w-7xl mx-auto px-6 mb-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+<div>
+<h2 class="text-4xl md:text-6xl font-bold tracking-tight font-headline-lg text-dark-graphite mb-4">Portfólio de Elite</h2>
+<p class="text-on-surface-variant max-w-xl text-lg">Interfaces imersivas de alta costura e soluções de e-commerce de luxo que geram recordes de engajamento.</p>
+</div>
+<a href="cases.html" class="bg-dark-graphite text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-brand-gold hover:text-dark-graphite transition-all">
+  Ver Todos os Cases
+</a>
+</div>
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group bg-surface-container-low rounded-2xl overflow-hidden border border-outline-variant hover:border-brand-gold transition-all duration-300 shadow-sm flex flex-col">
+<div class="h-60 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80"/>
+<div class="absolute top-4 left-4 bg-brand-gold text-dark-graphite px-3 py-1 rounded-full text-xs font-bold uppercase">Moda & Luxo</div>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between">
+<div>
+<h3 class="text-headline-md text-xl mb-2 text-dark-graphite font-bold">Aura Couture</h3>
+<p class="text-brand-gold font-black text-base mb-2">+150% Vendas Online</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">Plataforma de e-commerce imersiva e responsiva desenvolvida para alta costura sob medida.</p>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-low rounded-2xl overflow-hidden border border-outline-variant hover:border-brand-gold transition-all duration-300 shadow-sm flex flex-col">
+<div class="h-60 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=800&q=80"/>
+<div class="absolute top-4 left-4 bg-brand-gold text-dark-graphite px-3 py-1 rounded-full text-xs font-bold uppercase">Relojoaria</div>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between">
+<div>
+<h3 class="text-headline-md text-xl mb-2 text-dark-graphite font-bold">Chronos Swiss</h3>
+<p class="text-brand-gold font-black text-base mb-2">Conversão Recorde B2B</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">Experiência de alta precisão e branding digital premium para relojoaria suíça tradicional.</p>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-low rounded-2xl overflow-hidden border border-outline-variant hover:border-brand-gold transition-all duration-300 shadow-sm flex flex-col">
+<div class="h-60 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80"/>
+<div class="absolute top-4 left-4 bg-brand-gold text-dark-graphite px-3 py-1 rounded-full text-xs font-bold uppercase">Automobilístico</div>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between">
+<div>
+<h3 class="text-headline-md text-xl mb-2 text-dark-graphite font-bold">Apex Motors</h3>
+<p class="text-brand-gold font-black text-base mb-2">Leads Qualificados +300%</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">Configurador 3D interativo e landing page de lançamento de hipercarros esportivos elétricos.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 5: Serviços Teaser -->
+<section class="py-24 bg-dark-graphite text-white" id="services">
+<div class="max-w-7xl mx-auto px-6 mb-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+<div>
+<span class="text-brand-gold bg-white/10 inline-block px-3 py-1 font-bold uppercase tracking-widest mb-4 text-xs rounded-sm">Nossos Serviços</span>
+<h2 class="text-4xl md:text-6xl font-bold tracking-tight font-headline-lg text-white">Engenharia Digital para Marcas Globais</h2>
+</div>
+<a href="services.html" class="bg-brand-gold text-dark-graphite px-6 py-3 rounded-full font-bold text-sm hover:bg-white transition-all">
+  Explorar Serviços
+</a>
+</div>
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-brand-gold/50 transition-colors">
+<span class="text-brand-gold font-black text-2xl mb-4 block">01</span>
+<h3 class="text-lg font-bold text-white mb-2">Branding & Posicionamento</h3>
+<p class="text-xs text-pure-off-white/70 leading-relaxed">Criamos identidades visuais exclusivas B2B que exalam sofisticação e autoridade instantânea de luxo.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-brand-gold/50 transition-colors">
+<span class="text-brand-gold font-black text-2xl mb-4 block">02</span>
+<h3 class="text-lg font-bold text-white mb-2">Web Design</h3>
+<p class="text-xs text-pure-off-white/70 leading-relaxed">Desenvolvemos websites de altíssimo impacto visual que engajam leads qualificados desde o primeiro segundo.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-brand-gold/50 transition-colors">
+<span class="text-brand-gold font-black text-2xl mb-4 block">03</span>
+<h3 class="text-lg font-bold text-white mb-2">Configuradores 3D</h3>
+<p class="text-xs text-pure-off-white/70 leading-relaxed">Experiências tridimensionais integradas diretamente no navegador com customização em tempo real.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-brand-gold/50 transition-colors">
+<span class="text-brand-gold font-black text-2xl mb-4 block">04</span>
+<h3 class="text-lg font-bold text-white mb-2">Engenharia de CRO</h3>
+<p class="text-xs text-pure-off-white/70 leading-relaxed">Engenharia de funil baseada em dados de alta precisão para maximizar o retorno sobre investimento (ROI).</p>
+</div>
+</div>
+</section>
+
+<!-- Section 6: Processo Teaser -->
+<section class="py-24 bg-surface-container-lowest" id="process">
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+<div>
+<span class="text-dark-graphite bg-brand-gold inline-block px-3 py-1 font-bold uppercase tracking-widest mb-4 text-xs rounded-sm">Metodologia</span>
+<h2 class="text-4xl md:text-6xl font-bold tracking-tight font-headline-lg text-dark-graphite mb-6">Processo Estruturado</h2>
+<p class="text-lg text-on-surface-variant mb-8 leading-relaxed">Desenvolvimento ágil e transparente, garantindo alinhamento total de escopo e prazos de entrega do seu projeto digital de ponta a ponta.</p>
+<a href="process.html" class="inline-flex items-center gap-2 text-brand-gold font-bold hover:underline text-lg">
+  Conhecer Metodologia <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4 bg-white p-4 rounded-xl border border-outline-variant">
+<div class="w-10 h-10 rounded-full bg-brand-gold/10 text-brand-gold flex items-center justify-center font-bold">1</div>
+<div>
+<h4 class="font-bold text-dark-graphite text-sm">Discovery & Strategy</h4>
+<p class="text-xs text-muted-gray">Análise e estruturação estratégica do funil de conversão.</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white p-4 rounded-xl border border-outline-variant">
+<div class="w-10 h-10 rounded-full bg-brand-gold/10 text-brand-gold flex items-center justify-center font-bold">2</div>
+<div>
+<h4 class="font-bold text-dark-graphite text-sm">Design & Dev</h4>
+<p class="text-xs text-muted-gray">Interface premium e desenvolvimento limpo de alto desempenho.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 7: Lab Teaser -->
+<section class="py-24 bg-surface-container-low" id="lab">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<span class="text-dark-graphite bg-brand-gold inline-block px-3 py-1 font-bold uppercase tracking-widest mb-4 text-xs rounded-sm">Billi Lab</span>
+<h2 class="text-4xl md:text-6xl font-bold tracking-tight font-headline-lg text-dark-graphite mb-6">Playground & Código Generativo</h2>
+<p class="text-lg text-on-surface-variant mb-8 leading-relaxed">No nosso laboratório, misturamos física, partículas dinâmicas e design generativo para projetar o futuro da experiência interativa digital.</p>
+<a href="lab.html" class="bg-dark-graphite text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-brand-gold hover:text-dark-graphite transition-all inline-block">
+  Entrar no Lab
+</a>
+</div>
+<div class="bg-dark-graphite rounded-2xl h-60 flex items-center justify-center border border-outline-variant overflow-hidden relative shadow-lg">
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-gold/20 via-transparent to-transparent opacity-60"></div>
+<span class="material-symbols-outlined text-brand-gold text-5xl animate-pulse">blur_on</span>
+</div>
+</div>
+</section>
+
+<!-- Section 8: FAQ Teaser -->
+<section class="py-24 bg-background" id="faq">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<span class="text-dark-graphite bg-brand-gold inline-block px-3 py-1 font-bold uppercase tracking-widest mb-4 text-xs rounded-sm">Dúvidas</span>
+<h2 class="text-4xl md:text-6xl font-bold tracking-tight font-headline-lg text-dark-graphite mb-6">FAQ e Central de Ajuda</h2>
+<p class="text-lg text-on-surface-variant mb-8 max-w-lg mx-auto">Quer saber mais sobre investimentos, prazos, suporte e stack de tecnologias? Explore nossa central de perguntas frequentes.</p>
+<a href="faq.html" class="border border-outline text-dark-graphite px-6 py-3 rounded-full font-bold text-sm hover:bg-surface-container-low transition-all inline-block font-bold">
+  Acessar FAQ Completo
+</a>
+</div>
+</section>
+
+<!-- Section 9: Final CTA (Briefing Form with Estimator) -->
+<section class="py-24 bg-dark-graphite text-white" id="cta">
+<div class="max-w-4xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-6xl font-bold tracking-tight font-headline-lg mb-4 text-white">Pronto para quebrar recordes?</h2>
+<p class="text-xl font-medium text-pure-off-white/80">Faça uma simulação rápida do seu escopo e nos conte sobre seu desafio.</p>
+</div>
+<form class="bg-white/5 backdrop-blur-lg p-8 md:p-12 rounded-[2rem] border border-white/10 shadow-2xl">
+<!-- Interactive Project Estimator -->
+<div class="mb-12 border-b border-white/10 pb-10">
+    <h3 class="text-xs font-bold uppercase tracking-widest text-brand-gold mb-6 text-center">SIMULADOR DE ESCOPO & INVESTIMENTO</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <label class="text-sm font-semibold text-white/80 block mb-3">Tipo de Solução</label>
+        <div class="grid grid-cols-2 gap-3" id="estimator-type">
+          <button type="button" class="type-btn px-4 py-3 rounded-xl border border-white/20 hover:border-brand-gold text-xs font-bold bg-white/5 transition-all text-white active-type" data-multiplier="1">Website Premium</button>
+          <button type="button" class="type-btn px-4 py-3 rounded-xl border border-white/20 hover:border-brand-gold text-xs font-bold bg-white/5 transition-all text-white" data-multiplier="1.5">E-commerce de Luxo</button>
+          <button type="button" class="type-btn px-4 py-3 rounded-xl border border-white/20 hover:border-brand-gold text-xs font-bold bg-white/5 transition-all text-white" data-multiplier="2">Configurador 3D</button>
+          <button type="button" class="type-btn px-4 py-3 rounded-xl border border-white/20 hover:border-brand-gold text-xs font-bold bg-white/5 transition-all text-white" data-multiplier="1.2">Landing Page Premium</button>
+        </div>
+      </div>
+      <div>
+        <label class="text-sm font-semibold text-white/80 block mb-3">Complexidade / Escopo</label>
+        <div class="grid grid-cols-3 gap-3" id="estimator-scope">
+          <button type="button" class="scope-btn px-4 py-3 rounded-xl border border-white/20 hover:border-brand-gold text-xs font-bold bg-white/5 transition-all text-white active-scope" data-weeks="4">Start</button>
+          <button type="button" class="scope-btn px-4 py-3 rounded-xl border border-white/20 hover:border-brand-gold text-xs font-bold bg-white/5 transition-all text-white" data-weeks="8">Pro</button>
+          <button type="button" class="scope-btn px-4 py-3 rounded-xl border border-white/20 hover:border-brand-gold text-xs font-bold bg-white/5 transition-all text-white" data-weeks="12">Elite</button>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-wrap justify-between items-center gap-6">
+      <div>
+        <p class="text-xs text-white/50 uppercase tracking-wider">Prazo Estimado</p>
+        <p class="text-xl md:text-2xl font-extrabold text-white" id="estimate-time">~4 Semanas</p>
+      </div>
+      <div>
+        <p class="text-xs text-white/50 uppercase tracking-wider">Investimento Estimado</p>
+        <p class="text-xl md:text-2xl font-extrabold text-brand-gold" id="estimate-budget">R$ 8.000 - R$ 12.000</p>
+      </div>
+    </div>
+</div>
+<!-- Rest of the form -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-widest text-brand-gold/80">Nome Completo</label>
+<input class="bg-white/10 border-none rounded-xl p-4 text-white focus:ring-2 focus:ring-brand-gold placeholder:text-white/50" placeholder="Seu nome" type="text" required/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-widest text-brand-gold/80">E-mail Corporativo</label>
+<input class="bg-white/10 border-none rounded-xl p-4 text-white focus:ring-2 focus:ring-brand-gold placeholder:text-white/50" placeholder="nome@empresa.com" type="email" required/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-widest text-white/80">Empresa</label>
+<input class="bg-white/10 border-none rounded-xl p-4 text-white focus:ring-2 focus:ring-brand-gold placeholder:text-white/50" placeholder="Nome da sua empresa" type="text" required/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-widest text-white/80">Objetivo Selecionado</label>
+<select id="form-objective" class="bg-white/10 border-none rounded-xl p-4 text-white focus:ring-2 focus:ring-brand-gold appearance-none">
+<option class="text-dark-graphite" value="Website Premium">Website Premium</option>
+<option class="text-dark-graphite" value="E-commerce de Luxo">E-commerce de Luxo</option>
+<option class="text-dark-graphite" value="Configurador 3D">Configurador 3D</option>
+<option class="text-dark-graphite" value="Landing Page Premium">Landing Page Premium</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-2 mb-8">
+<label class="text-xs font-bold uppercase tracking-widest text-white/80">Mensagem</label>
+<textarea class="bg-white/10 border-none rounded-xl p-4 text-white focus:ring-2 focus:ring-brand-gold placeholder:text-white/50" placeholder="Fale um pouco sobre o seu projeto..." rows="4"></textarea>
+</div>
+<button class="w-full bg-brand-gold text-dark-graphite py-5 rounded-xl font-black text-xl hover:bg-white hover:text-dark-graphite transition-all uppercase tracking-tighter" type="submit">
+                Enviar Proposta
+            </button>
+</form>
+</div>
+</section>
+
+<!-- Section 10: Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant pt-20 pb-10">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<!-- Billi Custom SVG Logo -->
+<svg viewBox="0 0 100 100" class="w-8 h-8 text-dark-graphite" fill="currentColor" fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 50 21 A 35 35 0 1 1 49.9 21 Z M 30 56 A 20 20 0 0 0 70 56 C 70 46 65 42 50 48 C 35 42 30 46 30 56 Z" />
+    <circle cx="70" cy="22" r="9" class="text-brand-gold" fill="#C5A880" />
+</svg>
+<span class="font-headline-md text-xl tracking-tighter uppercase font-extrabold text-dark-graphite">Billi</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Redefinindo os limites do design B2B através da sofisticação e precisão estratégica.</p>
+</div>
+<div>
+<h4 class="font-bold text-dark-graphite mb-6 uppercase text-xs tracking-widest">Navegação</h4>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li><a class="hover:text-brand-gold transition-colors" href="manifesto.html">Manifesto</a></li>
+<li><a class="hover:text-brand-gold transition-colors" href="cases.html">Cases</a></li>
+<li><a class="hover:text-brand-gold transition-colors" href="services.html">Serviços</a></li>
+<li><a class="hover:text-brand-gold transition-colors" href="process.html">Processo</a></li>
+<li><a class="hover:text-brand-gold transition-colors" href="lab.html">Lab</a></li>
+<li><a class="hover:text-brand-gold transition-colors" href="faq.html">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-dark-graphite mb-6 uppercase text-xs tracking-widest">Serviços</h4>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li><a class="hover:text-brand-gold transition-colors" href="services.html">Web Design</a></li>
+<li><a class="hover:text-brand-gold transition-colors" href="services.html">Landing Pages</a></li>
+<li><a class="hover:text-brand-gold transition-colors" href="services.html">UI/UX Strategy</a></li>
+<li><a class="hover:text-brand-gold transition-colors" href="services.html">Branding</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-dark-graphite mb-6 uppercase text-xs tracking-widest">Contato</h4>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li>hello@billi.com</li>
+<li>+55 (11) 99999-9999</li>
+<li>São Paulo, BR</li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 pt-10 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-xs text-muted-gray">© 2026 Billi. Todos os direitos reservados.</p>
+<div class="flex gap-6">
+<a class="text-muted-gray hover:text-brand-gold transition-colors" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+<a class="text-muted-gray hover:text-brand-gold transition-colors" href="#"><span class="material-symbols-outlined" data-icon="public">public</span></a>
+<a class="text-muted-gray hover:text-brand-gold transition-colors" href="#"><span class="material-symbols-outlined" data-icon="link">link</span></a>
+</div>
+</div>
+</footer>
+
+<script>
+    // 1. Navbar entrance & Logo drop-bounce
+    gsap.from("nav", {
+        y: -80,
+        opacity: 0,
+        duration: 1,
+        ease: "power4.out"
+    });
+
+    gsap.from("#logo-container", {
+        y: -200,
+        opacity: 0,
+        duration: 1.6,
+        ease: "bounce.out",
+        delay: 0.1
+    });
+
+    // 2. Hero entrance animations
+    gsap.from(".reveal-hero h1", {
+        y: 50,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power4.out",
+        delay: 0.2
+    });
+
+    gsap.from(".reveal-hero p", {
+        y: 30,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        delay: 0.4
+    });
+
+    gsap.from(".reveal-hero a", {
+        scale: 0.95,
+        opacity: 0,
+        duration: 0.8,
+        ease: "back.out(1.7)",
+        stagger: 0.15,
+        delay: 0.6
+    });
+
+    // Animate mockups in hero
+    gsap.from(".reveal-hero-mockup .parallax-target:first-child", {
+        x: 80,
+        y: 40,
+        rotation: 3,
+        opacity: 0,
+        duration: 1.5,
+        ease: "power4.out",
+        delay: 0.5
+    });
+
+    gsap.from(".reveal-hero-mockup .parallax-target:last-child", {
+        x: -80,
+        y: 60,
+        rotation: -3,
+        opacity: 0,
+        duration: 1.5,
+        ease: "power4.out",
+        delay: 0.7
+    });
+
+    // 3. Parallax 3D mousemove tilt effect for Hero mockups
+    window.addEventListener('mousemove', (e) => {
+        const targets = document.querySelectorAll('.parallax-target');
+        const mouseX = (e.clientX - window.innerWidth / 2) / (window.innerWidth / 2);
+        const mouseY = (e.clientY - window.innerHeight / 2) / (window.innerHeight / 2);
+        
+        targets.forEach((target, index) => {
+            const speed = (index + 1) * 15;
+            gsap.to(target, {
+                x: mouseX * speed,
+                y: mouseY * speed,
+                rotationY: mouseX * 8 * (index === 0 ? -1 : 1),
+                rotationX: -mouseY * 8,
+                duration: 0.8,
+                ease: "power2.out",
+                overwrite: "auto"
+            });
+        });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if(target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // 4. Project Scope & Investment Estimator Logic
+    const typeBtns = document.querySelectorAll("#estimator-type .type-btn");
+    const scopeBtns = document.querySelectorAll("#estimator-scope .scope-btn");
+    const estimateTime = document.getElementById("estimate-time");
+    const estimateBudget = document.getElementById("estimate-budget");
+    const formObjective = document.getElementById("form-objective");
+    
+    let activeMultiplier = 1;
+    let activeWeeks = 4;
+    
+    function updateEstimate() {
+        const weeksVal = Math.round(activeWeeks * activeMultiplier);
+        let budgetText = "";
+        
+        if (activeWeeks === 4) {
+            budgetText = `R$ ${Math.round(8 * activeMultiplier)}.000 - R$ ${Math.round(12 * activeMultiplier)}.000`;
+        } else if (activeWeeks === 8) {
+            budgetText = `R$ ${Math.round(16 * activeMultiplier)}.000 - R$ ${Math.round(24 * activeMultiplier)}.000`;
+        } else {
+            budgetText = `A partir de R$ ${Math.round(32 * activeMultiplier)}.000`;
+        }
+        
+        estimateTime.textContent = `~${weeksVal} Semanas`;
+        estimateBudget.textContent = budgetText;
+    }
+    
+    typeBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            typeBtns.forEach(b => b.classList.remove("active-type", "border-brand-gold", "text-brand-gold"));
+            btn.classList.add("active-type", "border-brand-gold", "text-brand-gold");
+            activeMultiplier = parseFloat(btn.getAttribute("data-multiplier"));
+            
+            // Sync with form objective select field
+            const solutionName = btn.textContent.trim();
+            if(formObjective) {
+                formObjective.value = solutionName;
+            }
+            
+            updateEstimate();
+        });
+    });
+    
+    scopeBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            scopeBtns.forEach(b => b.classList.remove("active-scope", "border-brand-gold", "text-brand-gold"));
+            btn.classList.add("active-scope", "border-brand-gold", "text-brand-gold");
+            activeWeeks = parseInt(btn.getAttribute("data-weeks"));
+            updateEstimate();
+        });
+    });
+    
+    // Set initial active state visual borders
+    const initialType = document.querySelector(".active-type");
+    const initialScope = document.querySelector(".active-scope");
+    if(initialType) initialType.classList.add("border-brand-gold", "text-brand-gold");
+    if(initialScope) initialScope.classList.add("border-brand-gold", "text-brand-gold");
+
+    // Form Submission & Success Modal Handler
+    const contactForm = document.querySelector("#cta form");
+    const successModal = document.getElementById("success-modal");
+    const closeModalBtn = document.getElementById("close-modal-btn");
+
+    if(contactForm && successModal && closeModalBtn) {
+        contactForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            
+            // Show modal and animate inner content
+            successModal.classList.remove("pointer-events-none");
+            successModal.style.opacity = 1;
+            gsap.fromTo(successModal.querySelector("div"), 
+                { scale: 0.9, y: 30 },
+                { scale: 1, y: 0, duration: 0.5, ease: "back.out(1.5)" }
+            );
+
+            // Reset form
+            contactForm.reset();
+
+            // Re-apply initial active state visual borders for calculator
+            typeBtns.forEach(b => b.classList.remove("active-type", "border-brand-gold", "text-brand-gold"));
+            scopeBtns.forEach(b => b.classList.remove("active-scope", "border-brand-gold", "text-brand-gold"));
+            if(initialType) initialType.classList.add("active-type", "border-brand-gold", "text-brand-gold");
+            if(initialScope) initialScope.classList.add("active-scope", "border-brand-gold", "text-brand-gold");
+            
+            activeMultiplier = initialType ? parseFloat(initialType.getAttribute("data-multiplier")) : 1;
+            activeWeeks = initialScope ? parseInt(initialScope.getAttribute("data-weeks")) : 4;
+            updateEstimate();
+        });
+
+        const closeModal = () => {
+            gsap.to(successModal.querySelector("div"), {
+                scale: 0.9,
+                y: 30,
+                duration: 0.3,
+                ease: "power2.in",
+                onComplete: () => {
+                    successModal.style.opacity = 0;
+                    successModal.classList.add("pointer-events-none");
+                }
+            });
+        };
+
+        closeModalBtn.addEventListener("click", closeModal);
+        successModal.addEventListener("click", (e) => {
+            if(e.target === successModal) closeModal();
+        });
+    }
+</script>
+
+<!-- Success Modal (Hidden by default) -->
+<div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-dark-graphite/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+  <div class="bg-white border border-outline rounded-3xl p-8 max-w-md w-full mx-6 shadow-2xl relative text-center transform scale-95 transition-transform duration-300">
+    <div class="w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-6 text-dark-graphite shadow-lg">
+      <span class="material-symbols-outlined text-3xl font-black">check</span>
+    </div>
+    <h3 class="text-2xl font-headline-md font-bold text-dark-graphite mb-3">Proposta Recebida!</h3>
+    <p class="text-on-surface-variant mb-8 text-sm leading-relaxed">
+      Sua solicitação de projeto foi enviada com sucesso para a nossa equipe de engenharia e design. Entraremos em contato com um diagnóstico detalhado em até 24 horas.
+    </p>
+    <button id="close-modal-btn" class="w-full bg-dark-graphite text-white py-4 rounded-xl font-bold hover:bg-brand-gold hover:text-dark-graphite transition-all">
+      Fechar
+    </button>
+  </div>
+</div>
+
+</body></html>

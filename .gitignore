@@ -1,0 +1,3 @@
+.stitch/
+*.pyc
+__pycache__/

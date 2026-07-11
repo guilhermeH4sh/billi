@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Billi Lab | Inovação Digital</title>
+<meta name="description" content="Nosso laboratório criativo interativo de física de partículas, design generativo e código puro." />
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#131313",
+                        "on-primary": "#FFFFFF",
+                        "secondary": "#404040",
+                        "on-secondary": "#FFFFFF",
+                        "background": "#FFFFFF",
+                        "on-background": "#131313",
+                        "surface": "#F9F9F9",
+                        "on-surface": "#131313",
+                        "surface-variant": "#E0E0E0",
+                        "on-surface-variant": "#404040",
+                        "outline": "#D1D1D1",
+                        "outline-variant": "#EEEEEE",
+                        "surface-container-lowest": "#FFFFFF",
+                        "surface-container-low": "#F9F9F9",
+                        "surface-container": "#F3F3F3",
+                        "surface-container-high": "#EBEBEB",
+                        "surface-container-highest": "#E0E0E0",
+                        "brand-gold": "#C5A880",
+                        "dark-graphite": "#131313",
+                        "pure-off-white": "#FAFAFA",
+                        "muted-gray": "#757575"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Syne"],
+                        "display-xl": ["Syne"],
+                        "headline-md": ["Syne"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-brand-gold selection:text-dark-graphite">
+<!-- Section 1: Navbar (Sticky) -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3" id="logo-container">
+<!-- Billi Custom SVG Logo -->
+<svg viewBox="0 0 100 100" class="w-8 h-8 text-dark-graphite" fill="currentColor" fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 50 21 A 35 35 0 1 1 49.9 21 Z M 30 56 A 20 20 0 0 0 70 56 C 70 46 65 42 50 48 C 35 42 30 46 30 56 Z" />
+    <circle cx="70" cy="22" r="9" class="text-brand-gold" fill="#C5A880" />
+</svg>
+<a href="index.html" class="font-headline-md text-xl tracking-tighter uppercase font-extrabold text-dark-graphite">Billi</a>
+</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="text-sm font-medium hover:text-brand-gold transition-colors text-on-surface-variant" href="manifesto.html">Manifesto</a>
+<a class="text-sm font-medium hover:text-brand-gold transition-colors text-on-surface-variant" href="cases.html">Cases</a>
+<a class="text-sm font-medium hover:text-brand-gold transition-colors text-on-surface-variant" href="services.html">Serviços</a>
+<a class="text-sm font-medium hover:text-brand-gold transition-colors text-on-surface-variant" href="process.html">Processo</a>
+<a class="text-sm font-medium text-brand-gold" href="lab.html">Lab</a>
+<a class="text-sm font-medium hover:text-brand-gold transition-colors text-on-surface-variant" href="faq.html">FAQ</a>
+</div>
+<a href="index.html#cta" class="bg-dark-graphite text-white px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 hover:bg-brand-gold hover:text-dark-graphite transition-all inline-block text-center">
+            Iniciar Projeto
+        </a>
+</div>
+</nav>
+
+<!-- Main Page Content (Split screen) -->
+<main class="pt-32 pb-20 min-h-screen flex items-center bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    
+    <!-- Left Column: Controls & Description -->
+    <div class="lg:col-span-5 flex flex-col justify-center">
+        <span class="text-dark-graphite bg-brand-gold inline-block px-3 py-1 font-bold uppercase tracking-widest mb-4 text-xs rounded-sm self-start">Billi Lab</span>
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-dark-graphite mb-6 leading-tight tracking-tighter">Playground Generativo</h1>
+        <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
+            Personalize a física das partículas abaixo. Este experimento de código puro ilustra como elementos interativos geram conexões emocionais profundas com o usuário final.
+        </p>
+        
+        <!-- Interactive Sliders Control Panel -->
+        <div class="bg-white border border-outline-variant p-6 rounded-2xl space-y-6 shadow-sm">
+            <h3 class="text-xs font-bold text-dark-graphite uppercase tracking-widest border-b border-outline-variant pb-3 mb-4">Controles Físicos</h3>
+            
+            <!-- Density Slider -->
+            <div>
+                <div class="flex justify-between items-center mb-2">
+                    <label class="text-xs font-semibold text-on-surface-variant uppercase">Densidade (Partículas)</label>
+                    <span id="density-val" class="text-xs font-bold text-brand-gold">80</span>
+                </div>
+                <input id="slider-density" type="range" min="20" max="250" value="80" class="w-full h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-brand-gold"/>
+            </div>
+            
+            <!-- Connection Radius Slider -->
+            <div>
+                <div class="flex justify-between items-center mb-2">
+                    <label class="text-xs font-semibold text-on-surface-variant uppercase">Raio de Conexão</label>
+                    <span id="radius-val" class="text-xs font-bold text-brand-gold">75px</span>
+                </div>
+                <input id="slider-radius" type="range" min="30" max="180" value="75" class="w-full h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-brand-gold"/>
+            </div>
+            
+            <!-- Speed Slider -->
+            <div>
+                <div class="flex justify-between items-center mb-2">
+                    <label class="text-xs font-semibold text-on-surface-variant uppercase">Velocidade</label>
+                    <span id="speed-val" class="text-xs font-bold text-brand-gold">1.0x</span>
+                </div>
+                <input id="slider-speed" type="range" min="1" max="30" value="10" class="w-full h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-brand-gold"/>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Right Column: Massive Interactive Canvas Card -->
+    <div class="lg:col-span-7 h-[450px] md:h-[550px] relative bg-dark-graphite rounded-[2rem] overflow-hidden border border-outline-variant shadow-2xl">
+        <canvas id="particle-canvas" class="absolute inset-0 w-full h-full cursor-crosshair"></canvas>
+        <div class="absolute bottom-6 left-6 z-10 pointer-events-none">
+            <p class="text-xs font-bold uppercase tracking-widest text-brand-gold/60">Passe o mouse ou clique para desenhar novas partículas</p>
+        </div>
+    </div>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant pt-20 pb-10">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<svg viewBox="0 0 100 100" class="w-8 h-8 text-dark-graphite" fill="currentColor" fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 50 21 A 35 35 0 1 1 49.9 21 Z M 30 56 A 20 20 0 0 0 70 56 C 70 46 65 42 50 48 C 35 42 30 46 30 56 Z" />
+    <circle cx="70" cy="22" r="9" class="text-brand-gold" fill="#C5A880" />
+</svg>
+<span class="font-headline-md text-xl tracking-tighter uppercase font-extrabold text-dark-graphite">Billi</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Redefinindo os limites do design B2B através da sofisticação e precisão estratégica.</p>
+</div>
+<div>
+<h4 class="font-bold text-dark-graphite mb-6 uppercase text-xs tracking-widest">Navegação</h4>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li><a class="hover:text-brand-gold transition-colors" href="manifesto.html">Manifesto</a></li>
+<li><a class="hover:text-brand-gold transition-colors" href="cases.html">Cases</a></li>
+<li><a class="hover:text-brand-gold transition-colors" href="services.html">Serviços</a></li>
+<li><a class="hover:text-brand-gold transition-colors" href="process.html">Processo</a></li>
+<li><a class="text-brand-gold" href="lab.html">Lab</a></li>
+<li><a class="hover:text-brand-gold transition-colors" href="faq.html">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-dark-graphite mb-6 uppercase text-xs tracking-widest">Serviços</h4>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li><a class="hover:text-brand-gold transition-colors" href="services.html">Web Design</a></li>
+<li><a class="hover:text-brand-gold transition-colors" href="services.html">Landing Pages</a></li>
+<li><a class="hover:text-brand-gold transition-colors" href="services.html">UI/UX Strategy</a></li>
+<li><a class="hover:text-brand-gold transition-colors" href="services.html">Branding</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-dark-graphite mb-6 uppercase text-xs tracking-widest">Contato</h4>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li>hello@billi.com</li>
+<li>+55 (11) 99999-9999</li>
+<li>São Paulo, BR</li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 pt-10 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-xs text-muted-gray">© 2026 Billi. Todos os direitos reservados.</p>
+<div class="flex gap-6">
+<a class="text-muted-gray hover:text-brand-gold transition-colors" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+<a class="text-muted-gray hover:text-brand-gold transition-colors" href="#"><span class="material-symbols-outlined" data-icon="public">public</span></a>
+<a class="text-muted-gray hover:text-brand-gold transition-colors" href="#"><span class="material-symbols-outlined" data-icon="link">link</span></a>
+</div>
+</div>
+</footer>
+
+<!-- Interactive Engine script -->
+<script>
+    const canvas = document.getElementById("particle-canvas");
+    if(canvas) {
+        const ctx = canvas.getContext("2d");
+        
+        let particlesArray = [];
+        let width = canvas.offsetWidth;
+        let height = canvas.offsetHeight;
+        canvas.width = width;
+        canvas.height = height;
+        
+        // Control variables
+        let density = 80;
+        let connectDist = 75;
+        let speedMultiplier = 1.0;
+        
+        const mouse = {
+            x: null,
+            y: null,
+            radius: 120
+        };
+        
+        canvas.addEventListener("mousemove", (e) => {
+            const rect = canvas.getBoundingClientRect();
+            mouse.x = e.clientX - rect.left;
+            mouse.y = e.clientY - rect.top;
+        });
+        
+        canvas.addEventListener("mouseleave", () => {
+            mouse.x = null;
+            mouse.y = null;
+        });
+        
+        // Draw particle on click
+        canvas.addEventListener("click", (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const clickY = e.clientY - rect.top;
+            for(let i=0; i<5; i++){
+                let size = (Math.random() * 2) + 1;
+                let directionX = (Math.random() * 0.8) - 0.4;
+                let directionY = (Math.random() * 0.8) - 0.4;
+                particlesArray.push(new Particle(clickX, clickY, directionX, directionY, size, "rgba(197, 168, 128, 0.9)"));
+            }
+        });
+        
+        class Particle {
+            constructor(x, y, directionX, directionY, size, color) {
+                this.x = x;
+                this.y = y;
+                this.directionX = directionX;
+                this.directionY = directionY;
+                this.size = size;
+                this.color = color;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+            update() {
+                if (this.x > canvas.width || this.x < 0) {
+                    this.directionX = -this.directionX;
+                }
+                if (this.y > canvas.height || this.y < 0) {
+                    this.directionY = -this.directionY;
+                }
+                
+                // Mouse interaction physics
+                let dx = mouse.x - this.x;
+                let dy = mouse.y - this.y;
+                let distance = Math.sqrt(dx * dx + dy * dy);
+                if (distance < mouse.radius + this.size) {
+                    if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
+                        this.x += 2;
+                    }
+                    if (mouse.x > this.x && this.x > this.size * 10) {
+                        this.x -= 2;
+                    }
+                    if (mouse.y < this.y && this.y < canvas.height - this.size * 10) {
+                        this.y += 2;
+                    }
+                    if (mouse.y > this.y && this.y > this.size * 10) {
+                        this.y -= 2;
+                    }
+                }
+                this.x += this.directionX * speedMultiplier;
+                this.y += this.directionY * speedMultiplier;
+                this.draw();
+            }
+        }
+        
+        function initParticles() {
+            particlesArray = [];
+            for (let i = 0; i < density; i++) {
+                let size = (Math.random() * 2) + 0.8;
+                let x = (Math.random() * ((canvas.width - size * 2) - (size * 2)) + size * 2);
+                let y = (Math.random() * ((canvas.height - size * 2) - (size * 2)) + size * 2);
+                let directionX = (Math.random() * 0.8) - 0.4;
+                let directionY = (Math.random() * 0.8) - 0.4;
+                let color = "rgba(197, 168, 128, 0.65)"; // Dourado
+                particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+            }
+        }
+        
+        function connectParticles() {
+            let opacityValue = 1;
+            for (let a = 0; a < particlesArray.length; a++) {
+                for (let b = a; b < particlesArray.length; b++) {
+                    let dx = particlesArray[a].x - particlesArray[b].x;
+                    let dy = particlesArray[a].y - particlesArray[b].y;
+                    let distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance < connectDist) {
+                        opacityValue = 1 - (distance / connectDist);
+                        ctx.strokeStyle = `rgba(197, 168, 128, ${opacityValue * 0.3})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.beginPath();
+                        ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                        ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                        ctx.stroke();
+                    }
+                }
+                if (mouse.x && mouse.y) {
+                    let dx = particlesArray[a].x - mouse.x;
+                    let dy = particlesArray[a].y - mouse.y;
+                    let distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance < mouse.radius) {
+                        opacityValue = 1 - (distance / mouse.radius);
+                        ctx.strokeStyle = `rgba(197, 168, 128, ${opacityValue * 0.6})`;
+                        ctx.lineWidth = 0.8;
+                        ctx.beginPath();
+                        ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                        ctx.lineTo(mouse.x, mouse.y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+        
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+            }
+            connectParticles();
+            requestAnimationFrame(animateParticles);
+        }
+        
+        window.addEventListener("resize", () => {
+            if(canvas) {
+                width = canvas.offsetWidth;
+                height = canvas.offsetHeight;
+                canvas.width = width;
+                canvas.height = height;
+                initParticles();
+            }
+        });
+        
+        // Control Listeners
+        const sliderDensity = document.getElementById("slider-density");
+        const sliderRadius = document.getElementById("slider-radius");
+        const sliderSpeed = document.getElementById("slider-speed");
+        
+        sliderDensity.addEventListener("input", (e) => {
+            density = parseInt(e.target.value);
+            document.getElementById("density-val").textContent = density;
+            initParticles();
+        });
+        sliderRadius.addEventListener("input", (e) => {
+            connectDist = parseInt(e.target.value);
+            document.getElementById("radius-val").textContent = connectDist + "px";
+        });
+        sliderSpeed.addEventListener("input", (e) => {
+            speedMultiplier = parseFloat(e.target.value) / 10;
+            document.getElementById("speed-val").textContent = speedMultiplier.toFixed(1) + "x";
+        });
+        
+        initParticles();
+        animateParticles();
+    }
+</script>
+
+<script>
+    // Logo entrance animation
+    if (typeof gsap !== 'undefined') {
+        gsap.from("#logo-container", {
+            y: -200,
+            opacity: 0,
+            duration: 1.6,
+            ease: "bounce.out",
+            delay: 0.1
+        });
+    }
+</script>
+</body></html>
