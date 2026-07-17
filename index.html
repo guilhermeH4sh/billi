@@ -110,23 +110,6 @@
 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-gold/5 blur-[120px] rounded-full -z-0"></div>
 </header>
 
-<!-- Section 3: Manifesto Teaser -->
-<section class="py-24 bg-surface-container-lowest" id="manifesto">
-<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-<div>
-<span class="text-dark-graphite bg-brand-gold inline-block px-3 py-1 font-bold uppercase tracking-widest mb-4 text-xs rounded-sm">Manifesto</span>
-<h2 class="text-4xl md:text-6xl font-bold tracking-tight font-headline-lg text-dark-graphite mb-6">Impacto de Negócios através do Luxo & Disrupção</h2>
-<p class="text-lg text-on-surface-variant mb-8 leading-relaxed">Redefinimos a presença digital aplicando a sofisticação da alta costura e a precisão técnica da engenharia automobilística B2B. A estética de alta costura é a base de nossa visão.</p>
-<a href="manifesto.html" class="inline-flex items-center gap-2 text-brand-gold-dark font-bold hover:underline text-lg">
-  Ler Manifesto Completo <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-<div>
-<p class="text-dark-graphite font-bold text-3xl md:text-4xl border-l-4 border-brand-gold pl-6 py-2 leading-snug">"Nós não criamos apenas websites. Construímos verdadeiras obras de arte digitais focadas em conversão."</p>
-</div>
-</div>
-</section>
-
 <!-- Section 4: Cases Teaser (Swiper Carousel) -->
 <section class="py-24 bg-background overflow-hidden" id="cases">
 <div class="max-w-7xl mx-auto px-6 mb-16 flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6">
@@ -134,114 +117,144 @@
 <h2 class="text-4xl md:text-6xl font-bold tracking-tight font-headline-lg text-dark-graphite mb-4">Portfólio de Elite</h2>
 <p class="text-on-surface-variant max-w-xl text-lg">Demos interativas de alta performance e experiências B2B customizadas para múltiplos setores.</p>
 </div>
-<div class="flex flex-wrap items-center gap-4">
+<div class="flex flex-wrap items-center gap-6">
+<!-- Fraction Pagination -->
+<div class="swiper-pagination !static !w-auto text-sm font-bold tracking-wider text-dark-graphite"></div>
 <!-- Navigation Buttons -->
 <div class="flex gap-2">
-<button class="index-cases-prev-btn w-12 h-12 rounded-full border border-outline hover:border-brand-gold hover:text-brand-gold flex items-center justify-center transition-all text-dark-graphite focus-visible:rounded-full" aria-label="Caso anterior">
+<button class="index-cases-prev-btn w-12 h-12 rounded border border-outline hover:border-brand-gold hover:text-brand-gold flex items-center justify-center transition-all text-dark-graphite focus-visible:rounded" aria-label="Caso anterior">
 <span class="material-symbols-outlined">arrow_back</span>
 </button>
-<button id="index-autoplay-toggle-btn" class="w-12 h-12 rounded-full border border-outline hover:border-brand-gold hover:text-brand-gold flex items-center justify-center transition-all text-dark-graphite focus-visible:rounded-full" aria-label="Pausar carrossel">
+<button id="index-autoplay-toggle-btn" class="w-12 h-12 rounded border border-outline hover:border-brand-gold hover:text-brand-gold flex items-center justify-center transition-all text-dark-graphite focus-visible:rounded" aria-label="Pausar carrossel">
 <span class="material-symbols-outlined">pause</span>
 </button>
-<button class="index-cases-next-btn w-12 h-12 rounded-full border border-outline hover:border-brand-gold hover:text-brand-gold flex items-center justify-center transition-all text-dark-graphite focus-visible:rounded-full" aria-label="Próximo caso">
+<button class="index-cases-next-btn w-12 h-12 rounded border border-outline hover:border-brand-gold hover:text-brand-gold flex items-center justify-center transition-all text-dark-graphite focus-visible:rounded" aria-label="Próximo caso">
 <span class="material-symbols-outlined">arrow_forward</span>
 </button>
 </div>
-<a href="cases.html" class="bg-dark-graphite text-white px-6 py-3.5 rounded-full font-bold text-sm hover:bg-brand-gold hover:text-dark-graphite transition-all whitespace-nowrap">
+<a href="cases.html" class="bg-dark-graphite text-white px-6 py-3.5 rounded font-bold text-sm hover:bg-brand-gold hover:text-dark-graphite transition-all whitespace-nowrap">
   Ver Todos os Cases
 </a>
 </div>
 </div>
 <div class="max-w-7xl mx-auto px-6">
-<div class="swiper index-cases-swiper overflow-visible">
+<div class="swiper index-cases-swiper overflow-hidden">
 <div class="swiper-wrapper">
 <!-- Slide 1: E-Commerce & Luxo -->
-<div class="swiper-slide group bg-surface-container-low rounded-2xl overflow-hidden border border-outline-variant hover:border-brand-gold transition-all duration-300 shadow-sm h-auto flex flex-col">
-<div class="h-60 overflow-hidden relative">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="800" height="533" alt="Aura Couture website demo preview" src="assets/aura_couture.png"/>
-<div class="absolute top-4 left-4 bg-brand-gold text-dark-graphite px-3 py-1 rounded-full text-xs font-bold uppercase">E-Commerce & Luxo</div>
+<div class="swiper-slide group bg-surface-container-low rounded border border-outline-variant hover:border-brand-gold transition-all duration-300 shadow-sm h-auto grid grid-cols-1 lg:grid-cols-12 overflow-hidden">
+<div class="lg:col-span-7 h-72 sm:h-96 md:h-[480px] overflow-hidden relative border-b lg:border-b-0 lg:border-r border-outline-variant">
+<img class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700" width="800" height="533" alt="Aura Couture website demo preview" src="assets/aura_couture.png"/>
+<div class="absolute top-4 left-4 bg-brand-gold text-dark-graphite px-3 py-1 rounded-sm text-xs font-bold uppercase tracking-wider">E-Commerce & Luxo</div>
 </div>
-<div class="p-6 flex-grow flex flex-col justify-between">
+<div class="lg:col-span-5 p-8 md:p-12 flex flex-col justify-between">
 <div>
-<h3 class="text-headline-md text-xl mb-2 text-dark-graphite font-bold font-display-xl">Aura Couture</h3>
-<p class="text-brand-gold-dark font-black text-base mb-2">+150% Vendas Online</p>
-<p class="text-xs text-on-surface-variant leading-relaxed">Plataforma de e-commerce imersiva e responsiva desenvolvida para alta costura sob medida.</p>
+<p class="text-brand-gold-dark font-black text-2xl mb-4 block tracking-tight">+150% Vendas Online</p>
+<h3 class="text-3xl md:text-4xl font-bold font-display-xl text-dark-graphite mb-4 leading-tight">Aura Couture</h3>
+<p class="text-sm md:text-base text-on-surface-variant leading-relaxed">Plataforma de e-commerce imersiva e responsiva desenvolvida para alta costura sob medida.</p>
+</div>
+<div class="mt-8">
+<a href="cases.html" class="inline-flex items-center gap-2 text-dark-graphite hover:text-brand-gold-dark font-bold text-sm tracking-wide uppercase transition-colors">
+  Ver Caso Completo <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
 </div>
 </div>
 </div>
 <!-- Slide 2: Relojoaria (Corporativo) -->
-<div class="swiper-slide group bg-surface-container-low rounded-2xl overflow-hidden border border-outline-variant hover:border-brand-gold transition-all duration-300 shadow-sm h-auto flex flex-col">
-<div class="h-60 overflow-hidden relative">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="800" height="533" alt="Chronos Swiss website demo preview" src="assets/chronos_swiss.png"/>
-<div class="absolute top-4 left-4 bg-brand-gold text-dark-graphite px-3 py-1 rounded-full text-xs font-bold uppercase">Corporativo & Luxo</div>
+<div class="swiper-slide group bg-surface-container-low rounded border border-outline-variant hover:border-brand-gold transition-all duration-300 shadow-sm h-auto grid grid-cols-1 lg:grid-cols-12 overflow-hidden">
+<div class="lg:col-span-7 h-72 sm:h-96 md:h-[480px] overflow-hidden relative border-b lg:border-b-0 lg:border-r border-outline-variant">
+<img class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700" width="800" height="533" alt="Chronos Swiss website demo preview" src="assets/chronos_swiss.png"/>
+<div class="absolute top-4 left-4 bg-brand-gold text-dark-graphite px-3 py-1 rounded-sm text-xs font-bold uppercase tracking-wider">Corporativo & Luxo</div>
 </div>
-<div class="p-6 flex-grow flex flex-col justify-between">
+<div class="lg:col-span-5 p-8 md:p-12 flex flex-col justify-between">
 <div>
-<h3 class="text-headline-md text-xl mb-2 text-dark-graphite font-bold font-display-xl">Chronos Swiss</h3>
-<p class="text-brand-gold-dark font-black text-base mb-2">Conversão Recorde B2B</p>
-<p class="text-xs text-on-surface-variant leading-relaxed">Experiência de alta precisão e branding digital premium para relojoaria suíça tradicional.</p>
+<p class="text-brand-gold-dark font-black text-2xl mb-4 block tracking-tight">Conversão Recorde B2B</p>
+<h3 class="text-3xl md:text-4xl font-bold font-display-xl text-dark-graphite mb-4 leading-tight">Chronos Swiss</h3>
+<p class="text-sm md:text-base text-on-surface-variant leading-relaxed">Experiência de alta precisão e branding digital premium para relojoaria suíça tradicional.</p>
+</div>
+<div class="mt-8">
+<a href="cases.html" class="inline-flex items-center gap-2 text-dark-graphite hover:text-brand-gold-dark font-bold text-sm tracking-wide uppercase transition-colors">
+  Ver Caso Completo <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
 </div>
 </div>
 </div>
 <!-- Slide 3: Automobilístico & 3D -->
-<div class="swiper-slide group bg-surface-container-low rounded-2xl overflow-hidden border border-outline-variant hover:border-brand-gold transition-all duration-300 shadow-sm h-auto flex flex-col">
-<div class="h-60 overflow-hidden relative">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="800" height="533" alt="Apex Motors website demo preview" src="assets/apex_motors.png"/>
-<div class="absolute top-4 left-4 bg-brand-gold text-dark-graphite px-3 py-1 rounded-full text-xs font-bold uppercase">Tecnologia & 3D</div>
+<div class="swiper-slide group bg-surface-container-low rounded border border-outline-variant hover:border-brand-gold transition-all duration-300 shadow-sm h-auto grid grid-cols-1 lg:grid-cols-12 overflow-hidden">
+<div class="lg:col-span-7 h-72 sm:h-96 md:h-[480px] overflow-hidden relative border-b lg:border-b-0 lg:border-r border-outline-variant">
+<img class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700" width="800" height="533" alt="Apex Motors website demo preview" src="assets/apex_motors.png"/>
+<div class="absolute top-4 left-4 bg-brand-gold text-dark-graphite px-3 py-1 rounded-sm text-xs font-bold uppercase tracking-wider">Tecnologia & 3D</div>
 </div>
-<div class="p-6 flex-grow flex flex-col justify-between">
+<div class="lg:col-span-5 p-8 md:p-12 flex flex-col justify-between">
 <div>
-<h3 class="text-headline-md text-xl mb-2 text-dark-graphite font-bold font-display-xl">Apex Motors</h3>
-<p class="text-brand-gold-dark font-black text-base mb-2">Leads Qualificados +300%</p>
-<p class="text-xs text-on-surface-variant leading-relaxed">Configurador 3D interativo e landing page de lançamento de hipercarros esportivos elétricos.</p>
+<p class="text-brand-gold-dark font-black text-2xl mb-4 block tracking-tight">Leads Qualificados +300%</p>
+<h3 class="text-3xl md:text-4xl font-bold font-display-xl text-dark-graphite mb-4 leading-tight">Apex Motors</h3>
+<p class="text-sm md:text-base text-on-surface-variant leading-relaxed">Configurador 3D interativo e landing page de lançamento de hipercarros esportivos elétricos.</p>
+</div>
+<div class="mt-8">
+<a href="cases.html" class="inline-flex items-center gap-2 text-dark-graphite hover:text-brand-gold-dark font-bold text-sm tracking-wide uppercase transition-colors">
+  Ver Caso Completo <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
 </div>
 </div>
 </div>
 <!-- Slide 4: Educação & Elite -->
-<div class="swiper-slide group bg-surface-container-low rounded-2xl overflow-hidden border border-outline-variant hover:border-brand-gold transition-all duration-300 shadow-sm h-auto flex flex-col">
-<div class="h-60 overflow-hidden relative">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="800" height="533" alt="Athena University website demo preview" src="assets/athena_university.png"/>
-<div class="absolute top-4 left-4 bg-brand-gold text-dark-graphite px-3 py-1 rounded-full text-xs font-bold uppercase">Educação & Elite</div>
+<div class="swiper-slide group bg-surface-container-low rounded border border-outline-variant hover:border-brand-gold transition-all duration-300 shadow-sm h-auto grid grid-cols-1 lg:grid-cols-12 overflow-hidden">
+<div class="lg:col-span-7 h-72 sm:h-96 md:h-[480px] overflow-hidden relative border-b lg:border-b-0 lg:border-r border-outline-variant">
+<img class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700" width="800" height="533" alt="Athena University website demo preview" src="assets/athena_university.png"/>
+<div class="absolute top-4 left-4 bg-brand-gold text-dark-graphite px-3 py-1 rounded-sm text-xs font-bold uppercase tracking-wider">Educação & Elite</div>
 </div>
-<div class="p-6 flex-grow flex flex-col justify-between">
+<div class="lg:col-span-5 p-8 md:p-12 flex flex-col justify-between">
 <div>
-<h3 class="text-headline-md text-xl mb-2 text-dark-graphite font-bold font-display-xl">Athena University</h3>
-<p class="text-brand-gold-dark font-black text-base mb-2">Engajamento Alunos +85%</p>
-<p class="text-xs text-on-surface-variant leading-relaxed">Portal imersivo e sofisticado para universidade executiva de alto padrão.</p>
+<p class="text-brand-gold-dark font-black text-2xl mb-4 block tracking-tight">Engajamento Alunos +85%</p>
+<h3 class="text-3xl md:text-4xl font-bold font-display-xl text-dark-graphite mb-4 leading-tight">Athena University</h3>
+<p class="text-sm md:text-base text-on-surface-variant leading-relaxed">Portal imersivo e sofisticado para universidade executiva de alto padrão.</p>
+</div>
+<div class="mt-8">
+<a href="cases.html" class="inline-flex items-center gap-2 text-dark-graphite hover:text-brand-gold-dark font-bold text-sm tracking-wide uppercase transition-colors">
+  Ver Caso Completo <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
 </div>
 </div>
 </div>
 <!-- Slide 5: Pessoal & Portfólio -->
-<div class="swiper-slide group bg-surface-container-low rounded-2xl overflow-hidden border border-outline-variant hover:border-brand-gold transition-all duration-300 shadow-sm h-auto flex flex-col">
-<div class="h-60 overflow-hidden relative">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="800" height="533" alt="Gabriel Dupont portfolio website demo preview" src="assets/gabriel_dupont.png"/>
-<div class="absolute top-4 left-4 bg-brand-gold text-dark-graphite px-3 py-1 rounded-full text-xs font-bold uppercase">Pessoal & Portfólio</div>
+<div class="swiper-slide group bg-surface-container-low rounded border border-outline-variant hover:border-brand-gold transition-all duration-300 shadow-sm h-auto grid grid-cols-1 lg:grid-cols-12 overflow-hidden">
+<div class="lg:col-span-7 h-72 sm:h-96 md:h-[480px] overflow-hidden relative border-b lg:border-b-0 lg:border-r border-outline-variant">
+<img class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700" width="800" height="533" alt="Gabriel Dupont portfolio website demo preview" src="assets/gabriel_dupont.png"/>
+<div class="absolute top-4 left-4 bg-brand-gold text-dark-graphite px-3 py-1 rounded-sm text-xs font-bold uppercase tracking-wider">Pessoal & Portfólio</div>
 </div>
-<div class="p-6 flex-grow flex flex-col justify-between">
+<div class="lg:col-span-5 p-8 md:p-12 flex flex-col justify-between">
 <div>
-<h3 class="text-headline-md text-xl mb-2 text-dark-graphite font-bold font-display-xl">Gabriel Dupont</h3>
-<p class="text-brand-gold-dark font-black text-base mb-2">Alcance Global +120%</p>
-<p class="text-xs text-on-surface-variant leading-relaxed">Portfólio minimalista e elegante para pianista e maestro de prestígio internacional.</p>
+<p class="text-brand-gold-dark font-black text-2xl mb-4 block tracking-tight">Alcance Global +120%</p>
+<h3 class="text-3xl md:text-4xl font-bold font-display-xl text-dark-graphite mb-4 leading-tight">Gabriel Dupont</h3>
+<p class="text-sm md:text-base text-on-surface-variant leading-relaxed">Portfólio minimalista e elegante para pianista e maestro de prestígio internacional.</p>
+</div>
+<div class="mt-8">
+<a href="cases.html" class="inline-flex items-center gap-2 text-dark-graphite hover:text-brand-gold-dark font-bold text-sm tracking-wide uppercase transition-colors">
+  Ver Caso Completo <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
 </div>
 </div>
 </div>
 <!-- Slide 6: Finanças & Fintech -->
-<div class="swiper-slide group bg-surface-container-low rounded-2xl overflow-hidden border border-outline-variant hover:border-brand-gold transition-all duration-300 shadow-sm h-auto flex flex-col">
-<div class="h-60 overflow-hidden relative">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" width="800" height="533" alt="Zephyr Financial website demo preview" src="assets/zephyr_capital.png"/>
-<div class="absolute top-4 left-4 bg-brand-gold text-dark-graphite px-3 py-1 rounded-full text-xs font-bold uppercase">Finanças & Fintech</div>
+<div class="swiper-slide group bg-surface-container-low rounded border border-outline-variant hover:border-brand-gold transition-all duration-300 shadow-sm h-auto grid grid-cols-1 lg:grid-cols-12 overflow-hidden">
+<div class="lg:col-span-7 h-72 sm:h-96 md:h-[480px] overflow-hidden relative border-b lg:border-b-0 lg:border-r border-outline-variant">
+<img class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700" width="800" height="533" alt="Zephyr Financial website demo preview" src="assets/zephyr_capital.png"/>
+<div class="absolute top-4 left-4 bg-brand-gold text-dark-graphite px-3 py-1 rounded-sm text-xs font-bold uppercase tracking-wider">Finanças & Fintech</div>
 </div>
-<div class="p-6 flex-grow flex flex-col justify-between">
+<div class="lg:col-span-5 p-8 md:p-12 flex flex-col justify-between">
 <div>
-<h3 class="text-headline-md text-xl mb-2 text-dark-graphite font-bold font-display-xl">Zephyr Capital</h3>
-<p class="text-brand-gold-dark font-black text-base mb-2">Fundos sob gestão +400%</p>
-<p class="text-xs text-on-surface-variant leading-relaxed">Plataforma digital segura e sofisticada para gestão de fortunas e fundos privados.</p>
+<p class="text-brand-gold-dark font-black text-2xl mb-4 block tracking-tight">Fundos sob gestão +400%</p>
+<h3 class="text-3xl md:text-4xl font-bold font-display-xl text-dark-graphite mb-4 leading-tight">Zephyr Capital</h3>
+<p class="text-sm md:text-base text-on-surface-variant leading-relaxed">Plataforma digital segura e sofisticada para gestão de fortunas e fundos privados.</p>
+</div>
+<div class="mt-8">
+<a href="cases.html" class="inline-flex items-center gap-2 text-dark-graphite hover:text-brand-gold-dark font-bold text-sm tracking-wide uppercase transition-colors">
+  Ver Caso Completo <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
 </div>
 </div>
 </div>
 </div>
-<!-- Pagination Bullets -->
-<div class="swiper-pagination !static mt-10"></div>
 </div>
 </div>
 </section>
@@ -633,28 +646,19 @@
     // Swiper initialization for cases on index.html
     const indexCasesSwiper = new Swiper('.index-cases-swiper', {
         slidesPerView: 1,
-        spaceBetween: 24,
+        spaceBetween: 32,
         loop: true,
         autoplay: {
-            delay: 2500, // Faster autoplay delay
+            delay: 4000, // Slower autoplay delay for better readability of the larger layout
             disableOnInteraction: false,
         },
         pagination: {
             el: '.swiper-pagination',
-            clickable: true,
+            type: 'fraction',
         },
         navigation: {
             nextEl: '.index-cases-next-btn',
             prevEl: '.index-cases-prev-btn',
-        },
-        breakpoints: {
-            640: {
-                slidesPerView: 2,
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 32
-            }
         }
     });
 
